@@ -1,0 +1,274 @@
+:root {
+  --navbar-color: #eff0f0;
+  --primary-color: #212680;
+}
+
+* {
+  list-style-type: none;
+}
+
+body {
+  font-family: "Mukta", sans-serif;
+}
+h3 {
+  font-family: "Dancing Script", cursive;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--navbar-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 40px;
+  height: 40px;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.ul_social_icons li {
+  margin: 0 5px;
+}
+
+.hero_image {
+  min-height: 50vh;
+  width: 100vw;
+  background-image: url("https://th.bing.com/th/id/OIP.9gSU6E6KH8JHg_V7sTT_NwHaFj?w=251&h=188&c=7&r=0&o=5&pid=1.7");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero_content {
+  z-index: 2;
+}
+.hero_image::after {
+  content: "";
+  min-height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.home_intro {
+  background: white;
+  box-shadow: 0px 0px 15px -10px;
+}
+
+.home_intro a {
+  display: flex;
+}
+
+.home_intro img {
+  width: 50%;
+  margin-right: 5px;
+}
+
+.news_content_container {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  box-shadow: 0px 0px 15px -10px;
+  padding: 10px;
+}
+
+.action_btns_container {
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0px 0px 15px -10px;
+  padding: 10px;
+}
+
+.news_content_container img {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.news_card {
+  padding: 5px;
+  height: 250px;
+  border: 1px solid var(--navbar-color);
+}
+
+.card-title {
+  font-style: italic;
+  border-left: 2px solid var(--primary-color);
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+.news_headline {
+  max-width: 300px;
+  font-style: italic;
+  padding: 10px;
+  border-left: 2px solid var(--primary-color);
+}
+
+.news_desc {
+  font-size: 20px;
+}
+.loading_indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  height: 60vh;
+}
+
+.login_container {
+  background: url("https://www.bing.com/th?id=OIP.sFwIi-rDf0IY1lW_IoFnvwHaFj&w=288&h=216&c=8&rs=1&qlt=30&o=6&pid=3.1&rm=2");
+}
+.register_container {
+  background: url("https://th.bing.com/th/id/OIP.ePAKeTt-I2ygQuc1fGIuGgHaE8?w=231&h=180&c=7&r=0&o=5&pid=1.7");
+}
+.login_container,
+.register_container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_form_container,
+.register_form_container {
+  background: white;
+  color: black;
+  box-shadow: 0px 0px 15px -10px black;
+  padding: 20px;
+  min-height: 300px;
+}
+
+.login_key {
+  text-align: center;
+}
+
+.nav_user_img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.logout_btn {
+  border: 1px solid #555;
+  cursor: pointer;
+  padding: 0 5px;
+  margin: 1px;
+  border-radius: 5px;
+}
+
+.logout_btn:hover {
+  background: #999;
+  color: white;
+}
+
+.show_password {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.password {
+  position: relative;
+}
+.create_form_container {
+  margin: 0 auto;
+  box-shadow: 0px 0px 15px -10px;
+  padding: 10px;
+}
+
+.create_form_container img {
+  width: 90%;
+  height: 250px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.create_form_container .upload {
+  cursor: pointer;
+  background: var(--primary-color);
+  width: 30px;
+  height: 30px;
+  margin: 10px 0;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+}
+
+.user_details small {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+}
+
+.profile_img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.user_details i {
+  color: var(--primary-color);
+}
+
+.upload {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--navbar-color);
+  box-shadow: 0px 0px 15px -10px black;
+  color: blue;
+  margin-bottom: 10px;
+}
+
+.footer {
+  height: 100px;
+  background: var(--navbar-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer ul {
+  display: flex;
+}
+
+.footer li {
+  margin: 0 5px;
+}
