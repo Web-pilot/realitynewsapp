@@ -91,6 +91,14 @@ router.get("/myarticles", verifyToken, async (req, res) => {
     res.status(500).json(error.message);
   }
 });
+router.get("/count", async (req, res) => {
+  try {
+    const userCount = await Pool.query("SELECT * FROM users");
+    res.status(200).json(userCount.rowCount);
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+});
 // GET ALL NEWS
 router.get("/", async (req, res) => {
   try {

@@ -19,9 +19,7 @@ const Home = ({ user }) => {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      setError(
-        "There was an error fetching the request! Refresh the page to try again"
-      );
+      setError("There was an error fetching the request!");
       console.log(error);
     }
   };

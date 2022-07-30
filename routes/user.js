@@ -59,6 +59,14 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/count", async (req, res) => {
+  try {
+    const newsCount = await Pool.query("SELECT * FROM news");
+    res.status(200).json(newsCount.rowCount);
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+});
 //GET USER BY ID
 router.get("/:id", async (req, res) => {
   try {
