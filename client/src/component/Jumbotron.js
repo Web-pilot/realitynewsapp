@@ -1,28 +1,32 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Jumbotron = () => {
+  const [userCounts, setUsercount] = useState(0);
+  const [newsCounts, setNewsCount] = useState(0);
+
+  useEffect(() => {
+    const fetchApi = async () => {
+      try {
+        const userCount = axios.get("/api/users/count");
+        const newsCount = axios.get("/api/users/count");
+        setUsercount((await userCount).data);
+        setNewsCount((await newsCount).data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchApi();
+  }, []);
   return (
     <section className="jumbotron p-1">
       <div className="container">
         <div className="row">
           <div className="col col-md-4">
             <div className="home_intro p-2">
-              <Link to="">
-                <img
-                  src="https://th.bing.com/th/id/OIP.a4mx2S4aLb4WrolU_UOtsAHaE8?w=270&h=180&c=7&r=0&o=5&pid=1.7"
-                  alt=""
-                />
-                <div className="content">
-                  <h5>The best news</h5>
-                  <p>
-                    <small>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Officiis placeat magni veniam asperiores aspernatur nulla
-                    </small>
-                  </p>
-                </div>
-              </Link>
+              <span className="badge badge-secondary ">{userCounts} Users</span>
+              <span className="badge badge-secondary ">{newsCounts} News</span>
             </div>
           </div>
         </div>
