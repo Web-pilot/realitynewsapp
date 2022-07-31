@@ -11,8 +11,8 @@ const News = ({ user }) => {
 
   const fetchNews = async () => {
     try {
-      const newsRes = await axios.get("http://localhost:5000/api/news");
-      const category = await axios.get("http://localhost:5000/api/categories");
+      const newsRes = await axios.get("/api/news");
+      const category = await axios.get("/api/categories");
       setNews(newsRes.data);
       setCategories(category.data);
     } catch (error) {

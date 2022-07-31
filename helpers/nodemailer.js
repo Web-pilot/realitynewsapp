@@ -32,7 +32,7 @@ const sendResetPasswordEmail = async (req, res, next) => {
     );
 
     //  RESET PASSWORD URL
-    const url = `${process.env.APP_DOMAIN}/account/resetpassword?token=${token}`;
+    const url = `http://realitynewsapp.herokuapp.com/account/resetpassword?token=${token}`;
     let details = {
       from: '"Reality News App" <${process.env.EMAIL_USER}>',
       to: user.rows[0].email,

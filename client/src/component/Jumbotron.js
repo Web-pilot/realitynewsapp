@@ -24,8 +24,8 @@ const Jumbotron = () => {
         <div className="row">
           <div className="col col-md-4">
             <div className="home_intro p-2">
-              <span className="badge badge-secondary ">{userCounts} Users</span>
-              <span className="badge badge-secondary ">{newsCounts} News</span>
+              <span className="badge badge-secondary">{userCounts} Users</span>
+              <span className="badge badge-secondary">{newsCounts} News</span>
             </div>
           </div>
         </div>

@@ -18,7 +18,7 @@ const Register = () => {
         password,
       });
       setLoading(false);
-      window.location.replace("/login");
+      window.location.replace("/account/login");
     } catch (error) {
       setLoading(false);
       setMessage(error.response.data);
