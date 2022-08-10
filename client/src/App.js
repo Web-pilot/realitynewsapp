@@ -15,6 +15,7 @@ import UserProfile from "./component/UserProfile";
 import News from "./component/News";
 import MyItem from "./component/MyItem";
 import Footer from "./component/Footer";
+import Dashboard from "./component/Dashboard";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -84,6 +85,10 @@ function App() {
             )
           }
         />
+        <Route
+          path="/dashboard"
+          element={!user ? <Navigate to="/account/login" /> : <Dashboard />}
+        ></Route>
       </Routes>
       <Footer />
     </Router>

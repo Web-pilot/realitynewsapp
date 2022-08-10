@@ -69,6 +69,7 @@ router.put("/edit/:id", verifyToken, upload.single("img"), async (req, res) => {
 
 //GET LATEST NEWS
 router.get("/latest", async (req, res) => {
+  console.log("i got hit");
   try {
     const latestNews = await Pool.query(
       "SELECT * FROM news ORDER BY newsid DESC limit(6)"
@@ -81,6 +82,7 @@ router.get("/latest", async (req, res) => {
 router.get("/myarticles", verifyToken, async (req, res) => {
   try {
     const userid = req.user.userid;
+    console.log(userid);
     const myArticles = await Pool.query(
       "SELECT * FROM news WHERE userid = $1",
       [userid]

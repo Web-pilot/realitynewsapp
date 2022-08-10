@@ -47,6 +47,11 @@ const Navbar = ({ user, logout }) => {
                   Collection
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link to="/dashboard" className="nav-link">
+                  DASHBOARD
+                </Link>
+              </li>
             </ul>
             <div className="account_buttons">
               {user ? (

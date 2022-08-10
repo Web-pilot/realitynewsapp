@@ -44,15 +44,11 @@ export const CreateNews = () => {
       formData.append("img", file);
       formData.append("userid", user.userid);
 
-      const res = await axios.post(
-        "http://localhost:5000/api/news/create",
-        formData,
-        {
-          headers: {
-            Authorization: JSON.parse(token).accessToken,
-          },
-        }
-      );
+      const res = await axios.post("/api/news/create", formData, {
+        headers: {
+          Authorization: JSON.parse(token).accessToken,
+        },
+      });
       setLoading(false);
       window.location.replace(`/news/details/${res.data.newsid}`);
     } catch (error) {

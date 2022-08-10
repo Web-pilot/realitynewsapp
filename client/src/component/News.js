@@ -66,7 +66,7 @@ const News = ({ user }) => {
       <div className="formp-group my-4">
         <div className="input-group">
           <span className="input-group-text" id="basic-addon1">
-            <i class="bi bi-search-heart"></i>
+            <i className="bi bi-search-heart"></i>
           </span>
           <input
             type="search"
@@ -81,7 +81,6 @@ const News = ({ user }) => {
       <select
         className="form-select-sm"
         aria-label=".form-select-sm example"
-        value={filteredNews}
         onChange={(e) => setFilteredNewss(e.target.value)}
       >
         <option defaultValue={true}>All</option>
